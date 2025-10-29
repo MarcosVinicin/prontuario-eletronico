@@ -1,0 +1,36 @@
+{
+  "prontuarios": [
+    {
+      "id": 1761775744365,
+      "Paciente": {
+        "nome": "aaa",
+        "Telefone": "16985745",
+        "DataNascimento": "2025-10-30"
+      },
+      "Reclamacoes": {
+        "Queixa": "aaa",
+        "Medicamentos": "aa"
+      },
+      "Plano": {
+        "Diagnostico": "aa",
+        "Conduta": "aaa"
+      }
+    },
+    {
+      "id": 1761775817085,
+      "Paciente": {
+        "nome": "aaa",
+        "Telefone": "16982711425",
+        "DataNascimento": "2025-10-10"
+      },
+      "Reclamacoes": {
+        "Queixa": "aaa",
+        "Medicamentos": "aaa"
+      },
+      "Plano": {
+        "Diagnostico": "aa",
+        "Conduta": "aaa"
+      }
+    }
+  ]
+}
