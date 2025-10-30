@@ -1,15 +1,10 @@
 :root {
-  /* 🎨 Paleta definida */
-  --cor-primaria: #ef4444; /* vermelho hospitalar */
-  --cor-secundaria: #f3f4f6; /* fundo neutro */
-  --cor-texto: #1f2937; /* texto escuro */
-
-  /* 💎 Efeito Glass */
+  --cor-primaria: #ef4444; 
+  --cor-secundaria: #f3f4f6; 
+  --cor-texto: #1f2937; 
   --vidro-fundo: rgba(255, 255, 255, 0.3);
   --vidro-borda: rgba(255, 255, 255, 0.4);
   --vidro-sombra: rgba(0, 0, 0, 0.15);
-
-  /* ✍️ Tipografia */
   --fonte-base: "Poppins", sans-serif;
   --fonte-titulo: "Inter", sans-serif;
 }
@@ -25,8 +20,7 @@ body {
   color: var(--cor-texto);
 }
 
-/* 🩺 Formulário principal */
-form {
+.form {
   margin: 60px;
   background: var(--vidro-fundo);
   backdrop-filter: blur(14px) saturate(180%);
@@ -40,8 +34,7 @@ form {
   color: var(--cor-texto);
 }
 
-/* 🧾 Cabeçalho */
-h1 {
+.main-title{
   font-family: var(--fonte-titulo);
   font-weight: 600;
   text-align: center;
@@ -49,14 +42,13 @@ h1 {
   margin-bottom: 8px;
 }
 
-form > p {
+.main-descr{
   text-align: center;
   color: #374151;
   font-size: 0.95rem;
   margin-bottom: 25px;
 }
 
-/* 🧩 Seções */
 h2 {
   font-size: 1.1rem;
   margin-top: 30px;
@@ -67,7 +59,6 @@ h2 {
   color: var(--cor-texto);
 }
 
-/* Inputs e Textareas */
 input,
 textarea {
   width: 80%;
@@ -95,7 +86,6 @@ textarea:focus {
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
 }
 
-/* 🔘 Radio buttons */
 label {
   display: inline-flex;
   align-items: center;
@@ -110,7 +100,6 @@ input[type="radio"] {
   margin-right: 6px;
 }
 
-/* 💾 Botão de envio */
 button {
   background: var(--cor-primaria);
   color: white;
@@ -132,7 +121,6 @@ button:hover {
   box-shadow: 0 6px 15px rgba(239, 68, 68, 0.3);
 }
 
-/* 📱 Responsividade */
 @media (max-width: 640px) {
   form {
     padding: 25px;

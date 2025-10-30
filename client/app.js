@@ -44,7 +44,6 @@ async function enviarParaAPI(prontuario) {
     if (!resposta.ok) {
       throw new Error('Erro ao enviar dados');
     }
-
     const data = await resposta.json();
     alert(data.message || '✅ Prontuário enviado com sucesso!');
   } catch (erro) {
@@ -59,10 +58,8 @@ async function handleSubmit(event) {
 
   const prontuario = coletarDadosFormulario();
 
-  // Enviar para o servidor
   await enviarParaAPI(prontuario);
 
-  // Resetar formulário
   event.target.reset();
 }
 

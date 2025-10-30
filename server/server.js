@@ -16,10 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 
-if (!fs.existsSync(DB_PATH)) {
-  fs.writeFileSync(DB_PATH, JSON.stringify({ prontuarios: [] }, null, 2));
-  console.log("🆕 Arquivo db.json criado!");
-}
+
 
 function lerBanco() {
   const data = fs.readFileSync(DB_PATH, "utf-8");
@@ -39,7 +36,9 @@ app.post("/api/prontuarios", (req, res) => {
     db.prontuarios.push(prontuario);
     salvarBanco(db);
 
+    // feedback pro backend
     console.log("✅ Novo prontuário salvo:", prontuario);
+    // feedback para o usuário 
     res.status(201).json({ message: "Prontuário salvo com sucesso!" });
   } catch (error) {
     console.error("❌ Erro ao salvar prontuário:", error);
