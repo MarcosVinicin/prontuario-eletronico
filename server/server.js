@@ -19,6 +19,10 @@ app.use(express.json());
 
 
 function lerBanco() {
+  // db.json não vai para o GitHub (dados de pacientes); cria um banco vazio no primeiro uso
+  if (!fs.existsSync(DB_PATH)) {
+    fs.writeFileSync(DB_PATH, JSON.stringify({ prontuarios: [] }, null, 2));
+  }
   const data = fs.readFileSync(DB_PATH, "utf-8");
   return JSON.parse(data);
 }
